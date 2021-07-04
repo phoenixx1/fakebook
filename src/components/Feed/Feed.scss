@@ -1,0 +1,79 @@
+.feed__container {
+  flex: 1;
+  padding: 30px 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message__sender__container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+  width: 100%;
+}
+
+.message__sender__top {
+  display: flex;
+  border-bottom: 1px solid #eff2f5;
+  padding: 15px;
+
+  img {
+    width: 45px;
+    border-radius: 50%;
+  }
+
+  form {
+    flex: 1;
+    display: flex;
+
+    input {
+      outline-width: 0;
+      border: none;
+      padding: 5px 20px;
+      margin: 0 10px;
+      border-radius: 999px;
+      background-color: #eff2f5;
+    }
+
+    .message__sender__input {
+      flex: 1;
+    }
+
+    button {
+      display: none;
+    }
+  }
+}
+
+.message__sender__bottom {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.message__sender__option {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  color: gray;
+  margin: 5px;
+  cursor: pointer;
+
+  img {
+    width: 20px;
+  }
+
+  h3 {
+    font-size: medium;
+    margin-left: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #eff2f5;
+      border-radius: 20px;
+    }
+  }
+}
