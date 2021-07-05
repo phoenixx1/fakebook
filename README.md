@@ -1,3 +1,7 @@
+Check the deployed app [Fakebook](https://fakebook-1f111.web.app/)
+
+Login using Google and type the status, search a gif or paste a url for image/gif to post. Hit enter to post your message.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

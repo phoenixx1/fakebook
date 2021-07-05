@@ -1,8 +1,10 @@
 .app {
   background-color: #f1f2f5;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .app__body {
   display: flex;
+  justify-content: space-between;
 }

@@ -1,7 +1,24 @@
 import React from "react";
+import { actionTypes } from "../../api/reducer";
+import { useStateValue } from "../../api/StateProvider";
+import { auth, provider } from "../../firebase";
 import "./Header.scss";
 
 function Header() {
+  const [{ user }, dispatch] = useStateValue();
+
+  const signOut = () => {
+    console.log("logout");
+    auth
+      .signOut()
+      .then(() => {
+        dispatch({
+          type: actionTypes.SET_USER,
+          user: null,
+        });
+      })
+      .catch((error) => alert(error.message));
+  };
   return (
     <div className="header__container">
       <div className="header__left">
@@ -42,8 +59,8 @@ function Header() {
 
       <div className="header__right">
         <div className="header__info">
-          <img src="https://avatars.githubusercontent.com/u/44865935?v=4" />
-          <h4>Name</h4>
+          <img src={user.photoURL} />
+          <h4>{user.displayName}</h4>
         </div>
 
         <div className="icon__button">
@@ -58,8 +75,8 @@ function Header() {
             alt="notificationsactive"
           />
         </div>
-        <div className="icon__button">
-          <img src="/icons/header/expandmore.svg" alt="expandmoreIcon" />
+        <div className="icon__button" onClick={signOut}>
+          <img src="/icons/header/logout.svg" alt="logoutIcon" />
         </div>
       </div>
     </div>

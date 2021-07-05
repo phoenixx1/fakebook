@@ -21,7 +21,7 @@
   border-bottom: 1px solid #eff2f5;
   padding: 15px;
 
-  img {
+  .user__image {
     width: 45px;
     border-radius: 50%;
   }
@@ -30,7 +30,8 @@
     flex: 1;
     display: flex;
 
-    input {
+    .message__sender__input {
+      flex: 1;
       outline-width: 0;
       border: none;
       padding: 5px 20px;
@@ -39,8 +40,36 @@
       background-color: #eff2f5;
     }
 
-    .message__sender__input {
-      flex: 1;
+    .gif__search {
+      position: relative;
+
+      .gif__input {
+        height: 35px;
+        outline-width: 0;
+        border: none;
+        padding: 5px 20px;
+        margin: 0 10px;
+        border-radius: 999px;
+        background-color: #eff2f5;
+      }
+
+      .gifs__result {
+        background-color: #f1f2f5;
+        position: absolute;
+        display: flex;
+        width: 250px;
+        height: 300px;
+        overflow-y: scroll;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        img {
+          cursor: pointer;
+          height: 100px;
+          width: 110px;
+          margin-bottom: 5px;
+        }
+      }
     }
 
     button {
@@ -74,6 +103,74 @@
     &:hover {
       background-color: #eff2f5;
       border-radius: 20px;
+    }
+  }
+}
+
+.post__container {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+}
+
+.post__top {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 15px;
+
+  img {
+    margin-right: 10px;
+    width: 50px;
+    border-radius: 50%;
+  }
+}
+
+.post__top__info {
+  h3 {
+    font-size: medium;
+  }
+  p {
+    font-size: small;
+    color: gray;
+    margin-top: -10px;
+  }
+}
+
+.post__bottom {
+  margin: -10px 0px 5px 0px;
+  padding: 0px 25px;
+}
+
+.post__image {
+  width: 100%;
+}
+
+.post__options {
+  border-top: 1px solid lightgray;
+  justify-content: space-evenly;
+  display: flex;
+  font-size: medium;
+  color: gray;
+  cursor: pointer;
+  padding: 10px;
+
+  .post__option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    flex: 1;
+
+    p {
+      margin-left: 10px;
+    }
+
+    &:hover {
+      background-color: #eff2f5;
+      border-radius: 10px;
     }
   }
 }

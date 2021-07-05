@@ -2,6 +2,7 @@ import React from "react";
 import { useStateValue } from "../../api/StateProvider";
 import { auth, provider } from "../../firebase";
 import { actionTypes } from "../../api/reducer";
+import "./Login.scss";
 
 function Login() {
   const [{}, dispatch] = useStateValue();
@@ -25,10 +26,7 @@ function Login() {
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png"
           alt=""
         />
-        <img
-          src="https://www.logo.wine/a/logo/Facebook/Facebook-Logo.wine.svg"
-          alt=""
-        />
+        <img src="/images/fakebook.svg" alt="" />
       </div>
       <button type="submit" onClick={signIn}>
         Sign In
